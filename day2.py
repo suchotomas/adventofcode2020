@@ -14,9 +14,7 @@ def second_valitadion(key, passw, p1, p2):
 valid_part1 = 0
 valid_part2 = 0
 for l in data:
-    line = l.strip()
-    l = re.split('[- :]', line)
-    f, t, key, _, passw = l
+    f, t, key, _, passw  = re.split('[- :]', l.strip())
     f, t = int(f), int(t)
     if first_validation(key, passw, f, t):
         valid_part1 += 1
